@@ -747,7 +747,7 @@ namespace gmtl
       if (gmtl::Math::abs(denom) < eps)    // Ray parallel to plane
       {
          t = 0;
-         if (distance(plane, ray.mOrigin) < eps)     // Test for ray on plane
+         if (gmtl::Math::abs(distance(plane, ray.mOrigin)) < eps)     // Test for ray on plane
          {
             return true;
          }
